@@ -1,16 +1,25 @@
 ---
-
+import "./styles/global.css";
+import Tarjeta from "./components/Tarjeta.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mi Portafolio</title>
+  </head>
+  <body class="max-w-2xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">👋 Hola, soy Franco</h1>
+    <p class="mb-6 text-gray-700">Este es mi primer proyecto con Astro 🚀</p>
+
+    <Tarjeta 
+      titulo="Sobre mí" 
+      descripcion="Soy programador en aprendizaje y estoy probando Astro." 
+    />
+
+    <a href="/proyectos" 
+       class="inline-block mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+      👉 Ver mis proyectos
+    </a>
+  </body>
 </html>

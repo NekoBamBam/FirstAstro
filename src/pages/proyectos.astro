@@ -1,0 +1,29 @@
+---
+import "../styles/global.css";
+import Tarjeta from "./components/Tarjeta.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mis proyectos</title>
+  </head>
+  <body class="max-w-2xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">💻 Proyectos</h1>
+
+    <Tarjeta 
+      titulo="App de Gastos" 
+      descripcion="Una app sencilla para controlar mis gastos." 
+    />
+
+    <Tarjeta 
+      titulo="Anotador de Truco" 
+      descripcion="Una app divertida para llevar el score en el truco." 
+    />
+
+    <a href="/" 
+       class="inline-block mt-6 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">
+      ⬅️ Volver al inicio
+    </a>
+  </body>
+</html>
