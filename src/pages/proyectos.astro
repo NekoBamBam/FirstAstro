@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import "./styles/global.css";
 import Tarjeta from "./components/Tarjeta.astro";
 ---
 
@@ -8,22 +8,25 @@ import Tarjeta from "./components/Tarjeta.astro";
     <meta charset="UTF-8" />
     <title>Mis proyectos</title>
   </head>
-  <body class="max-w-2xl mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-6">💻 Proyectos</h1>
+  <body class="min-h-screen bg-gray-900 text-gray-800 flex flex-col items-center justify-center px-6">
+    <main class="max-w-2xl w-full  shadow-lg rounded-2xl bg-gray-700 p-8">
+      <h1 class="text-3xl font-bold mb-6  text-blue-700">💻 Proyectos</h1>
 
-    <Tarjeta 
-      titulo="App de Gastos" 
-      descripcion="Una app sencilla para controlar mis gastos." 
-    />
+      <Tarjeta 
+        titulo="App de Gastos" 
+        descripcion="Una app sencilla para controlar mis gastos." 
+        link="https://tailwindcss.com/docs/installation/framework-guides/astro"
+      />
 
-    <Tarjeta 
-      titulo="Anotador de Truco" 
-      descripcion="Una app divertida para llevar el score en el truco." 
-    />
+      <Tarjeta 
+        titulo="Anotador de Truco" 
+        descripcion="Una app divertida para llevar el score en el truco." 
+      />
 
-    <a href="/" 
-       class="inline-block mt-6 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">
-      ⬅️ Volver al inicio
-    </a>
+      <a href="/" 
+        class="inline-block mt-6 px-5 py-3 bg-gray-600 text-white rounded-xl shadow hover:bg-gray-700 transition">
+        ⬅️ Volver al inicio
+      </a>
+    </main>
   </body>
 </html>

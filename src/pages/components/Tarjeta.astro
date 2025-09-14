@@ -1,8 +1,16 @@
 ---
-const { titulo, descripcion } = Astro.props;
+const { titulo, descripcion, link } = Astro.props;
 ---
 
-<div class="p-4 border border-gray-300 rounded-xl bg-white shadow-sm mb-4">
-  <h2 class="text-xl font-semibold mb-2">{titulo}</h2>
-  <p class="text-gray-600">{descripcion}</p>
-</div>
+{link ? (
+  <a href={link} target="_blank" rel="noopener noreferrer"
+     class="block p-6 border border-gray-200 rounded-xl bg-white shadow hover:shadow-md transition mb-4">
+    <h2 class="text-2xl font-semibold mb-2 text-blue-600">{titulo}</h2>
+    <p class="text-gray-700">{descripcion}</p>
+  </a>
+) : ( //condicional para estatico o link
+  <div class="p-6 border border-gray-200 rounded-xl bg-white shadow mb-4">
+    <h2 class="text-2xl font-semibold mb-2 text-blue-600">{titulo}</h2>
+    <p class="text-gray-700">{descripcion}</p>
+  </div>
+)}
